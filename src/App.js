@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header2/Header';
+import Products from './Components/Products2/Products';
+import './App.css'
 
-function App() {
+const products = [
+  { nome: 'Notebook', propriedades: ['16gb ram', '512gb'] },
+  { nome: 'Smartphone', propriedades: ['2gb ram', '128gb'] }
+]
+
+const { pathname } = window.location;
+
+const page = pathname === '/' ? 'Home' : 'Produtos'
+
+console.log(page);
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className='App'>
+      <div className='header-links'><Header /></div>
+      <h1 className='title'>{page}</h1>
+      {page === 'Home' ? (
+        <p className='home-description'>Essa é a home do site.</p>
+        ) : (
+        <div>
+          {products.map(el => <Products key={el.nome} products={el} />)}
+        </div>
+      )}
+    </section>
   );
 }
 
