@@ -16,3 +16,6 @@ App1.js => React para iniciantes (desestruturação, props, map, filter, etc.)
 
 App2.js => React para iniciantes (criação de componentes, props)
 * App2.js => React for beginers (component creation, props)
+
+App3.js => React hooks - useState e exercícios
+* App3.js => React hooks - useState and exercises
