@@ -32,7 +32,7 @@ const App = () => {
         <div>
           <h1>{info.nome}</h1>
           <p>R$ {info.preco}</p>
-          <img src={info.fotos[0].src} />
+          <img src={info.fotos[0].src} alt={info.fotos[0].alt}/>
         </div>
       )}
     </>
